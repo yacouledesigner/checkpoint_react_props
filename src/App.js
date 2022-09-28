@@ -1,14 +1,13 @@
 import React from 'react';
-import Profile from './profil/Profile'
-import './App.css';
-import maphoto from './maphoto.jpg'
+import "./App.css"
+import Profile from './profil/Profile';
+import profile from "./profile.png";
 
-
-function App() {
-
+const App = () => {
+  let appStyle = {display:'flex', justifyContent:'center', alignItem:'center', width:'100%', height:'100vh', textAlign:'center', marginTop:200}
   return (
-    <div className="App">
-      <Profile fullName= "Ouattara Ibrahim Yacouba" bio="Je suis perfectionniste" profession=" Developpeur Fullstack JS">{maphoto}</Profile>
+    <div style ={appStyle}>
+      <Profile fullname="Ouattara Ibrahim Yacouba" bio="Je suis amoureux du developpement web" profession="Graphiste 2D ">{profile}</Profile>
     </div>
   );
 }

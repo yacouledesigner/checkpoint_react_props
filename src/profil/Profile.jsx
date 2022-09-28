@@ -1,17 +1,20 @@
 import "./Profile.css"
 
-const Profile = ({fullName, bio, profession, children, handleName}) => {
-    console.log(children);
-    let profileStyle = {display:'flex', justifyContent:'center', alignItems:'center', textAlign:'center', width:800, height:400, boxShadow:'2px 2px 5px black'}
+const Profile = (props) => {
+    let profileStyle = {backgroundColor: 'aliceblue', textAlign:'center', width:150, height:170, borderRadius:10, boxShadow:'1px 1px 2px lightblue'}
     return (
-        <div className='profile' style = {profileStyle}>
-            <div> <img src={children} style={{width:'100%', height:'100%'}}/></div>
-            <div>
-                <h2>{fullName}</h2>
-                <span style={{fontWeight:'bolder', fontSize:16, marginTop:1}}>Profession : {profession}</span>
-                <p style={{fontWeight:'bolder', fontSize:16, marginTop:1}}>Description : {bio}</p>
+        <div style ={profileStyle}>
+            <div style ={{marginLeft:'3.5rem',width:40, height:40}}>
+                <img src={props.children} alt="photo" style ={{width:'100%', height:'100%'}}/>
+            </div>
+            <div style ={{}}>
+                <p style ={{fontSize:13, fontWeight:'bolder', color:'blue'}}>{props.fullname}</p>
+                <p style ={{marginTop:1,fontSize:10}}>{props.profession}</p>
+                <p style ={{marginTop:1, fontSize:10, fontWeight:'bolder'}}>{props.bio}</p>
             </div>
         </div>
     );
 }
+
 export default Profile;
+
