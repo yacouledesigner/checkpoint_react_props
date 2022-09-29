@@ -1,7 +1,10 @@
 import "./Profile.css"
+import PropTypes from 'prop-types';
+
+
 
 const Profile = (props) => {
-    let profileStyle = {backgroundColor: 'aliceblue', textAlign:'center', width:150, height:170, borderRadius:10, boxShadow:'1px 1px 2px lightblue'}
+    let profileStyle = {paddingTop:2,backgroundColor: 'aliceblue', textAlign:'center', width:150, height:170, borderRadius:10, boxShadow:'1px 1px 2px lightbluecl'}
     return (
         <div style ={profileStyle}>
             <div style ={{marginLeft:'3.5rem',width:40, height:40}}>
@@ -17,4 +20,13 @@ const Profile = (props) => {
 }
 
 export default Profile;
+
+Profile.propTypes = {
+    fullname: PropTypes.string.isRequired,
+    profession: PropTypes.string.isRequired,
+    bio: PropTypes.string.isRequired,
+};
+
+
+
 
